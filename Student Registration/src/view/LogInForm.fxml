@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorLogIn" prefHeight="426.0" prefWidth="706.0" style="-fx-background-color: #A3B1A7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <ImageView fitHeight="426.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/LogIn.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="155.0" fitWidth="156.0" layoutX="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="425.0" layoutY="120.0" text="Sign In">
+         <font>
+            <Font name="Bell MT" size="32.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#4d7bff" />
+                  <Stop color="BLACK" offset="0.007662835249042145" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXTextField fx:id="txtUserName" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="361.0" layoutY="208.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="279.0" promptText="Email or User Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="361.0" layoutY="281.0" prefHeight="28.0" prefWidth="279.0" promptText="Password" unFocusColor="BLACK">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXPasswordField>
+      <ImageView fitHeight="50.0" fitWidth="76.0" layoutX="309.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/user-check.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="76.0" layoutX="306.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/user-plus.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSignIn" layoutX="331.0" layoutY="350.0" onAction="#btnSignInOnAction" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #218c74; -fx-border-radius: 5;" stylesheets="@../styles/Styles.css" text="Sign In">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

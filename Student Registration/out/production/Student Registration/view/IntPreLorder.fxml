@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="327.0" prefWidth="600.0" style="-fx-background-color: #18645A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IntPreLorderController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="222.0" layoutX="21.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="561.0">
+         <fill>
+            <LinearGradient endX="0.9238095238095239" endY="0.7682539621988932" startX="0.5428571564810617">
+               <stops>
+                  <Stop color="#18645a" />
+                  <Stop color="#2b7269" offset="0.41580756013745707" />
+                  <Stop color="#042b2a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ProgressBar layoutX="23.0" layoutY="298.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="18.0" prefWidth="550.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label fx:id="lblLoading" layoutX="15.0" layoutY="273.0" prefHeight="18.0" prefWidth="459.0" text="Loading....." AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="140.0">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.4135166093928981" />
+                  <Stop color="BLACK" offset="0.720504009163803" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="222.0" fitWidth="240.0" layoutX="179.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="41.0" layoutY="174.0" prefHeight="66.0" prefWidth="514.0" text="Student Registration System - v1.0 Created by Imesh 2021">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.4730813287514318" />
+                  <Stop color="BLACK" offset="0.7754868270332187" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="455.0" prefWidth="954.0" style="-fx-background-color: #A3B1A7;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddFeeFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="700.0" layoutY="242.0" onAction="#btnClearDataOnAction" opacity="0.87" prefHeight="47.0" prefWidth="225.0" style="-fx-background-color: #d35400;" text="Clear Data">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="700.0" layoutY="360.0" onAction="#btnAddFeeOnAction" opacity="0.87" prefHeight="47.0" prefWidth="225.0" style="-fx-background-color: #16a085;" text="Add Fee">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="FLOPPY_ALT" size="20" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtCash" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="672.0" layoutY="108.0" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#btnFeeRelesed" prefHeight="28.0" prefWidth="253.0" promptText="Cash" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbCourseId" focusColor="BLACK" labelFloat="true" layoutX="281.0" layoutY="109.0" prefHeight="25.0" prefWidth="138.0" promptText="Select Course Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtCourseName" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="448.0" layoutY="108.0" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#btnFeeRelesed" prefHeight="28.0" prefWidth="150.0" promptText="Course Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="252.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icon_pushpin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="638.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/money.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="22.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/edit.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="790.0" layoutY="14.0" prefHeight="28.0" prefWidth="150.0" text="2021-10-10">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="723.0" layoutY="15.0" text="Date :">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="700.0" layoutY="302.0" onAction="#btnUpdateOnAction" prefHeight="47.0" prefWidth="225.0" style="-fx-background-color: #27ae60;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="700.0" layoutY="181.0" onAction="#btnDeleteOnAction" prefHeight="47.0" prefWidth="225.0" style="-fx-background-color: #c0392b;" text="Delete ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblFee" layoutX="30.0" layoutY="177.0" onMouseClicked="#clickMouseOnAction" prefHeight="238.0" prefWidth="637.0">
+         <columns>
+            <TableColumn fx:id="colFeeId" prefWidth="121.66665649414062" text="Fee Id" />
+            <TableColumn fx:id="colCourseId" prefWidth="160.6666259765625" text="Course Id" />
+            <TableColumn fx:id="colCourseName" prefWidth="107.66668701171875" text="Course Name" />
+            <TableColumn fx:id="colCash" prefWidth="124.0" text="Cash" />
+            <TableColumn fx:id="colDate" prefWidth="124.0" text="Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="62.0" layoutY="108.0" prefHeight="28.0" prefWidth="84.0" text="Fee Id :">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUpdateFeeId" layoutX="129.0" layoutY="108.0" prefHeight="28.0" prefWidth="84.0" text="FEE_000">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFeeId" layoutX="14.0" layoutY="23.0" prefHeight="28.0" prefWidth="112.0" text="FEE_000">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

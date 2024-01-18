@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="batchPayment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="893f0e66-10fd-48d0-a2e7-6e2fe3ff14a3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT COUNT(Student_Id)*5000.00 AS All_Student_Payment, b. Batch_Name from batch b, student s WHERE  b.Batch_Id =s.Batch_Id GROUP BY  Batch_Name;]]>
+	</queryString>
+	<field name="All_Student_Payment" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="All_Student_Payment"/>
+		<property name="com.jaspersoft.studio.field.label" value="All_Student_Payment"/>
+	</field>
+	<field name="Batch_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Batch_Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Batch_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="batch"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="555" height="30" uuid="31608d34-c3a2-45d4-81fa-65bbc53fc7f3"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[== Institute Report ==]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="555" height="30" uuid="b780a9ba-cdd2-4e4e-9f8b-62849a962ef5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Batch Details]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="431" y="-16" width="100" height="30" uuid="6eb840ea-7d57-498d-949d-5deac5dbcac2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="533" y="-16" width="100" height="20" uuid="a3ab0b1c-55be-467a-ad75-e03b18f48541"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="275" y="0" width="278" height="30" backcolor="#A1A1A1" uuid="bc2dfe10-c136-4bc8-9fd2-11e67496d809">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7df8da8a-6d12-4e48-984d-01e4eae0aa30"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[All_Student_Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-2" y="0" width="277" height="30" backcolor="#A1A1A1" uuid="e72d979f-59da-4f7b-8c7a-036b35fd3093">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9e4ee88-4869-4042-90dc-540dfd310f55"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch_Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="275" y="0" width="278" height="30" uuid="4db6a7e5-7998-47e1-8c73-900fc4c6c8bb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7df8da8a-6d12-4e48-984d-01e4eae0aa30"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{All_Student_Payment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-2" y="0" width="277" height="30" uuid="5e442959-a86a-4069-a81f-eae3606f8cba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9e4ee88-4869-4042-90dc-540dfd310f55"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Batch_Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

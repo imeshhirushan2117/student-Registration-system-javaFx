@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="591.0" prefWidth="1095.0" style="-fx-background-color: #A3B1A7;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddReportFormController">
+   <children>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" graphicTextGap="5.0" layoutX="25.0" layoutY="14.0" onMouseClicked="#btnPrintRegister" prefHeight="217.0" prefWidth="507.0" style="-fx-background-color: #218c74;" text="Print Register Student">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="38.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="USERS" size="38" />
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="5.0" layoutY="265.0" prefHeight="313.0" prefWidth="1083.0">
+         <columns>
+            <TableColumn fx:id="colStudentId" prefWidth="95.66665649414062" text="Student Id" />
+            <TableColumn fx:id="colStudentName" prefWidth="122.33331298828125" text="Student Name" />
+            <TableColumn fx:id="colAddress" prefWidth="100.33331298828125" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="92.33331298828125" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="132.33331298828125" text="Email" />
+            <TableColumn fx:id="colCourseName" prefWidth="136.33331298828125" text="Course Id" />
+            <TableColumn fx:id="colBatchName" prefWidth="128.0" text="Batch Id" />
+            <TableColumn fx:id="colGender" prefWidth="138.0" text="Gender" />
+            <TableColumn fx:id="colAdmissionFee" prefWidth="133.0" text="Admission Fee" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" graphicTextGap="5.0" layoutX="561.0" layoutY="15.0" onMouseClicked="#btnBatchPayment" prefHeight="217.0" prefWidth="516.0" style="-fx-background-color: #218c74;" text="Print Batch Payment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="38.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="CREDIT_CARD_ALT" size="38" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

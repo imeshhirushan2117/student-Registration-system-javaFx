@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="591.0" prefWidth="1085.0" style="-fx-background-color: #A3B1A7;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddUserFormController">
+   <children>
+      <JFXTextField fx:id="txtFistName" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="37.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="208.0" promptText="First Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLastName" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="320.0" layoutY="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="208.0" promptText="Last Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="596.0" layoutY="42.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="208.0" promptText="Contact" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="865.0" layoutY="45.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="208.0" promptText="Email" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="98.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="208.0" promptText="User Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="315.0" layoutY="102.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="217.0" promptText="Password" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRole" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="591.0" layoutY="105.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="217.0" promptText="Role" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="828.0" layoutY="51.0">
+         <image>
+            <Image url="@../assets/minutemailer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="34.0" layoutX="9.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/person-fill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="34.0" layoutX="280.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/person-lines-fill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="558.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/telephone-plus-fill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="4.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/user-plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="41.0" layoutX="273.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/user-check.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="556.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/sort-down.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="424.0" layoutY="162.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #c0392b;" text="Delete ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="583.0" layoutY="161.0" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #d35400;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="748.0" layoutY="158.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #27ae60;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="156.0" onAction="#btnAddOnAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #16a085;" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblAddUser" layoutX="10.0" layoutY="257.0" onMouseClicked="#clickMouseOnAction" prefHeight="322.0" prefWidth="1056.0">
+        <columns>
+          <TableColumn fx:id="colFirstName" prefWidth="144.66665649414062" text="First Name" />
+          <TableColumn fx:id="colLastName" prefWidth="184.66668701171875" text="Last Name" />
+            <TableColumn fx:id="colContact" prefWidth="156.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="262.0" text="Email" />
+            <TableColumn fx:id="colUserName" prefWidth="184.0" text="User Name" />
+            <TableColumn fx:id="colRole" prefWidth="133.33331298828125" text="Role" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

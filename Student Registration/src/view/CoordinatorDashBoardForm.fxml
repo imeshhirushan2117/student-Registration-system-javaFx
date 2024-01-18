@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#btnPrintStudent" prefHeight="591.0" prefWidth="1085.0" style="-fx-background-color: #A3B1A7;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoordinatorDashBoardFormController">
+   <children>
+      <TableView fx:id="tblCourseDetails" layoutX="22.0" layoutY="203.0" prefHeight="329.0" prefWidth="325.0">
+        <columns>
+          <TableColumn fx:id="colCourseName" prefWidth="104.33331298828125" text="Course Name" />
+          <TableColumn fx:id="colBatchName" prefWidth="118.99996948242188" text="Batch Name" />
+            <TableColumn fx:id="colStudentCount" prefWidth="100.0" text="Student Count" />
+        </columns>
+      </TableView>
+      <Separator layoutX="130.0" layoutY="174.0" prefHeight="2.0" prefWidth="212.0" />
+      <TableView fx:id="tblStudentDetails" layoutX="381.0" layoutY="203.0" prefHeight="329.0" prefWidth="325.0">
+         <columns>
+            <TableColumn fx:id="colSubjectName" prefWidth="113.66668701171875" text="Subject Name" />
+            <TableColumn fx:id="colTeacherName" prefWidth="131.33331298828125" text="Teacher Name " />
+            <TableColumn fx:id="colTimePeriod" prefWidth="79.3333740234375" text="Time Period" />
+         </columns>
+      </TableView>
+      <Label layoutX="372.0" layoutY="243.0" prefHeight="28.0" prefWidth="119.0" style="-fx-font-size: 15;" />
+      <Separator layoutX="489.0" layoutY="171.0" prefHeight="2.0" prefWidth="212.0" />
+      <TableView fx:id="tblFeeDetails" layoutX="737.0" layoutY="202.0" prefHeight="329.0" prefWidth="325.0">
+         <columns>
+            <TableColumn fx:id="colFeeCourseName" prefWidth="158.33331298828125" text="Course Name" />
+            <TableColumn fx:id="colFee" prefWidth="165.0" text="Fee " />
+         </columns>
+      </TableView>
+      <Separator layoutX="845.0" layoutY="170.0" prefHeight="2.0" prefWidth="212.0" />
+      <Label layoutX="23.0" layoutY="164.0" text="Batch Details">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="161.0" text="Subject Details">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="737.0" layoutY="161.0" text="Fee Details">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="546.0" onMouseClicked="#btnPrintBatchDetails" prefHeight="31.0" prefWidth="325.0" style="-fx-background-color: #218c74;" text="Print Batch Details">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="546.0" onMouseClicked="#btnPrintSubjectDetails" prefHeight="31.0" prefWidth="325.0" style="-fx-background-color: #218c74; -fx-background-size: 38;" text="Print Subject Details">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="737.0" layoutY="543.0" onMouseClicked="#btnPrintFeeDetails" prefHeight="31.0" prefWidth="325.0" style="-fx-background-color: #218c74;" text="Print Fee Details">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="25.0" layoutY="24.0" onMouseClicked="#btnPrintRegister" prefHeight="89.0" prefWidth="1032.0" style="-fx-background-color: #218c74;" text="Print Register Student">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

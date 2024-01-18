@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fee Details" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1db4820d-d83f-419a-8165-d8dca574041f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT Cash,CourseName FROM fee]]>
+	</queryString>
+	<field name="Cash" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Cash"/>
+		<property name="com.jaspersoft.studio.field.label" value="Cash"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CourseName"/>
+		<property name="com.jaspersoft.studio.field.label" value="CourseName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="555" height="30" uuid="0e1f6986-2839-4112-865a-d9f8dfde1329"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[== Institute Report ==]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="555" height="30" uuid="29f6aa6a-5229-4d2a-b784-f9dda0894802"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fee Details]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="445" y="-16" width="100" height="30" uuid="e149d6e2-f72f-4bb7-bbe4-c46d676fedec"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="533" y="-16" width="100" height="20" uuid="465786c4-5c36-4f29-8793-8311bb31f01d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="271" y="0" width="278" height="30" backcolor="#6B6B6B" uuid="f95fed10-efaf-4ce3-8270-1a28af307387">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08f41b8c-df5c-4436-ba75-49e20d8827ea"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-5" y="0" width="277" height="30" backcolor="#6B6B6B" uuid="b0522f07-28f7-4dd0-8e16-603c9b73c7cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dea0d85-673e-48ae-9b65-e90e69f32d79"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CourseName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="271" y="0" width="278" height="30" uuid="3444d21c-c0e7-4e56-b456-93d13c836f56">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08f41b8c-df5c-4436-ba75-49e20d8827ea"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-5" y="0" width="277" height="30" uuid="fc22dc4f-431b-4d2c-9c83-dd4e034c897c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dea0d85-673e-48ae-9b65-e90e69f32d79"/>
+				</reportElement>
+				<box leftPadding="10">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CourseName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

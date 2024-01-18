@@ -1,0 +1,36 @@
+.btnSignIn{
+    /*-fx-text-fill:white;*/
+}
+
+.table-view:focused{
+    -fx-background-insets: 0px;
+}
+
+
+.table-view .column-header{
+    -fx-size:25px;
+    -fx-background-color: #34495e;
+    -fx-font-size: 13;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill:  #f8f6ee;
+}
+
+.table-view .table-row-cell:empty{
+    -fx-background-color:  #f8f6ee;
+
+}
+
+.table-view .table-row-cell:selected{
+    -fx-background-color:linear-gradient(to right, rgba(119, 8, 245, 0.29), rgba(15, 93, 255, 0.39));
+    /*-fx-background-color:linear-gradient(to right, rgba(0, 198, 255, 0.29), rgba(0, 114, 255, 0.39));*/
+
+
+}
+.table-view .table-row-cell:selected *{
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: rgb(54, 49, 49);
+
+}

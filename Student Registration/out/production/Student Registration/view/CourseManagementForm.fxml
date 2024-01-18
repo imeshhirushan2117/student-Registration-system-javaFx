@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="591.0" prefWidth="1085.0" style="-fx-background-color: #A3B1A7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CourseManagementFormController">
+   <children>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="277.0" layoutY="38.0" onAction="#btnAddCourseOnAction" opacity="0.87" prefHeight="92.0" prefWidth="508.0" style="-fx-background-color: #82589F;" text="Add Course">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="EDIT" size="30" text="" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="277.0" layoutY="306.0" onAction="#btnAddBatchOnAction" prefHeight="114.0" prefWidth="508.0" style="-fx-background-color: #01a3a4;" text="Add Batch">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="BOOK" size="30" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="277.0" layoutY="167.0" onAction="#btnAddFeeOnAction" prefHeight="99.0" prefWidth="508.0" style="-fx-background-color: #DCAA3F;" text="Add Fee">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView glyphName="DOLLAR" size="30" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="277.0" layoutY="450.0" onAction="#btnAddExamOnAction" prefHeight="99.0" prefWidth="508.0" style="-fx-background-color: #B33771;" text="Add Exam">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView glyphName="FILE_TEXT" size="30" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
